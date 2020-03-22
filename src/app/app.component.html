@@ -1,27 +1,20 @@
-<div class="container">
-
-  <div class="row">
-    <div class="col-md-3" *ngFor="let pokemon of responsePokemons?.results, let pointer = index">
-      <mat-card class="example-card mat-elevation-z8">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{pokemon.name}}</mat-card-title>
-          <mat-card-subtitle>{{pokemon.name}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{pokemon.imageUrl}}.png" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>
-
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
+<div class="main-container">
+  <div class="container container-pokemons">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let pokemon of responsePokemons?.results, let pointer = index">
+        <div class="card-container mat-elevation-z8 animated {{nameAnimation}} background-color-{{getRandomNumber()}}">
+          <img [src]="pokemon.imageUrl">
+          <p class="subtitle capitalize text-center">{{pokemon.name}}</p>
+        </div>
+      </div>
     </div>
   </div>
-  <button class="btn btn-warning btn-block"  (click)="getNextPokemons()"> Cargar siguientes pokemons</button>
 
-  
+  <div class="container container-btns">
+    <button mat-stroked-button (click)="getAftherPokemons()">
+      <mat-icon>keyboard_arrow_left</mat-icon> Anterior
+    </button>
+    <button mat-stroked-button (click)="getNextPokemons()"> Siguiente <mat-icon>keyboard_arrow_right</mat-icon></button>
+  </div>
+
 </div>
