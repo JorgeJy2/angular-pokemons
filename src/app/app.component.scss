@@ -2,8 +2,7 @@
 
 .main-container {
   background-color: whitesmoke;
-  padding: 5%;
-  height: 100%;
+  padding: 3%;
 }
 
 .container {
@@ -12,26 +11,24 @@
   padding: 2%;
 }
 
-.container-btns {
-  margin-top: 2%;
+.btns-container {
+  margin-top: 3%;
 }
 
 .card-container {
   border-radius: 20px;
   padding-top: 100px;
-
   height: 160px;
-  background: #ccc;
   position: relative;
 }
 
-.container-pokemons {
+.cards-container {
   height: 300px;
   padding-top: 100px;
 }
 
-.container-btn-acction {
-  float: right;
+.title-container {
+  margin-bottom: 3%;
 }
 
 // CONTAINER END
@@ -49,55 +46,19 @@ p.capitalize {
   text-transform: capitalize;
 }
 
-// TEXT END
-
-// BACKGROUND COLOR INIT
-.background-color-0 {
-  background-image: linear-gradient(to right, #06e6ae, rgb(63, 247, 177));
-  // background-color: #ec3431;
-}
-
-.background-color-1 {
-  background-image: linear-gradient(to right, #3e9fb2, #53cfe7);
-  //background-color: #3e9fb2;
-}
-
-.background-color-2 {
-  background-image: linear-gradient(to right, #fe8700, #eb7653);
-  //background-color: #feb500;
-}
-
-.background-color-3 {
-  background-image: linear-gradient(to right, #f72323, #e7523e);
-  //background-color: #23c2a2;
-}
-
-.background-color-4 {
-  background-image: linear-gradient(to right, #0162a7, #4ba8eb);
-  //background-color: #0162a7;
-}
-// BACKGROUND COLOR END
-
 .image-card {
   position: absolute;
   top: -110px;
+  width: 90%;
 }
 
-
 // text
-.title{
+.title {
   text-align: center;
   font-size: 1.5rem;
   letter-spacing: 0.02rem;
   font-weight: bold;
-  color:  #5a5656;
-}
-
-.container-title {
-  // background-image: linear-gradient(to right, #06e6ae, rgb(63, 247, 177));
-  // background-image: linear-gradient(to right, #fe8700, #eb7653);
-  // color: white;
-  margin-bottom: 5%;
+  color: #5a5656;
 }
 
 .pokebola {

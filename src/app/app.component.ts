@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Pokemon } from './models/Pokemon.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { PaginatorPokemonService } from './services/paginator-pokemon.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { DetailPokemonComponent } from './components/detail-pokemon/detail-pokemon.component';
 
 const ANIMATION_LEFT = 'fadeInLeftBig';
 const ANIMATION_RIGHT = 'fadeInRightBig';
@@ -21,7 +23,11 @@ export class AppComponent implements OnInit {
 
   public nameAnimation: string;
 
-  constructor(private paginatorPokemon: PaginatorPokemonService, private _snackBar: MatSnackBar) {
+  constructor(
+    private paginatorPokemon: PaginatorPokemonService,
+    private _snackBar: MatSnackBar,
+    private _bottomSheet: MatBottomSheet) {
+
     this.pokemons = [];
     this.nameAnimation = ANIMATION_RIGHT;
   }
@@ -66,5 +72,9 @@ export class AppComponent implements OnInit {
       (response: Pokemon[]) => this.pokemons = response,
       error => this.showMessage(error)
     );
+  }
+
+  public openBottomSheet(pokemon: Pokemon): void {
+    this._bottomSheet.open(DetailPokemonComponent, { data: { pokemon: pokemon } });
   }
 }

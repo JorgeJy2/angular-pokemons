@@ -12,10 +12,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatBottomSheetModule, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS } from '@angular/material/bottom-sheet';
+import { DetailPokemonComponent } from './components/detail-pokemon/detail-pokemon.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailPokemonComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +30,16 @@ import { MatIconModule } from '@angular/material/icon';
     MatSnackBarModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatBottomSheetModule,
+    MatListModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    DetailPokemonComponent
+  ]
 })
 export class AppModule { }

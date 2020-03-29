@@ -3,4 +3,8 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-@import '~animate.css/animate.min'
+@import '~animate.css/animate.min';
+
+.mat-bottom-sheet-container {
+    padding:0 !important;
+}

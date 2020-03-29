@@ -3,6 +3,7 @@ export class Pokemon {
     name: string;
     url: string;
     imageUrl?: string;
+    detailImmageUrl?: string;
     backgroundColor?: string;
 }
 
