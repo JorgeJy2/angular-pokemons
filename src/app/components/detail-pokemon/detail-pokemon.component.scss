@@ -1,85 +1,84 @@
 .detail-container {
-  width: 100%;
-  height: 100%;
-  padding-left:  4%;
-  padding-right: 4%;
-  padding-top: 1%;
+    width: 100%;
+    height: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
 }
 
 .description-container {
-  width: 100%;
+    width: 100%;
 }
 
 .btn-close-container {
-  margin-left: auto;
-  // margin-right: 100px;
+    margin-left: auto;
+    // margin-right: 100px;
 }
 
 .detail-image {
-  width: 100%;
+    width: 100%;
 }
-
 
 .detail-grid-container-main {
-  display: grid;
-  grid-template-columns: 400px auto;
-  grid-gap: 10px;
-  div {
-    text-align: justify;
-    padding: 15px 0;
-  }
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-gap: 10px;
+    div {
+        text-align: justify;
+        padding: 15px 0;
+    }
 }
 
-
 .detail-grid-container {
-  display: grid;
-  grid-template-columns: 400px auto;
-  grid-gap: 10px;
-  div {
-    text-align: justify;
-    padding: 20px 0;
-  }
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-gap: 10px;
+    div {
+        text-align: justify;
+        padding: 20px 0;
+    }
 }
 
 .description {
-  font-size: 1.1rem;
-  letter-spacing: 0.05rem;
-  font-weight: normal;
-  color: white;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    font-weight: normal;
+    color: white;
 }
 
 .btn-close {
-  font-size: 40px;
-  .mat-icon {
-    font-size: 35px;
-  }
+    font-size: 40px;
+    .mat-icon {
+        font-size: 35px;
+    }
+}
+
+.title {
+    font-size: 3.5rem;
+    letter-spacing: 0.02rem;
+    font-weight: bold;
+    color: white;
 }
 
 .subtitle {
-  font-size: 3.5rem;
-  letter-spacing: 0.02rem;
-  font-weight: bold;
-  color: white;
-}
-
-.subtitle-su {
-  font-size: 2rem;
-  letter-spacing: 0.12rem;
-  font-weight: normal;
-  color: white;
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+    font-weight: normal;
+    color: white;
+    margin-top: .8em;
 }
 
 p.accent-text {
-  font-size: 1.5rem;
-  letter-spacing: 0.05rem;
-  font-weight: bold;
-  color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    color: white;
 }
 
 p.capitalize {
-  text-transform: capitalize;
+    text-transform: capitalize;
 }
 
-.jaja {
-  padding: 3% !important;
+.info-detail-container {
+    padding: 3% !important;
 }

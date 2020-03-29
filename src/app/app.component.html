@@ -1,25 +1,36 @@
 <div class="main-container">
-  <div class="container title title-container">
-    <img class="pokebola" src="../assets/image/pokemon.png" alt="" srcset="">
-    Pokemons
-  </div>
-
-  <div class="container cards-container">
-    <div class="row">
-      <div class="col-md-3" *ngFor="let pokemon of pokemons, let pointer = index">
-        <div (click)="openBottomSheet(pokemon)"
-          class="hand-mouse card-container mat-elevation-z8 animated {{nameAnimation}} {{pokemon.backgroundColor}}">
-          <img class="image-card" [src]="pokemon.imageUrl">
-          <p class="subtitle capitalize text-center">{{pokemon.name}}</p>
-        </div>
-      </div>
+    <div class="container title title-container">
+        <img class="pokebola" src="../assets/image/pokemon.png" alt="" srcset=""> Pokemons
     </div>
-  </div>
 
-  <div class="container btns-container">
-    <button mat-stroked-button (click)="getAftherPokemons()">
-      <mat-icon>keyboard_arrow_left</mat-icon> Anterior
-    </button>
-    <button mat-stroked-button (click)="getNextPokemons()"> Siguiente <mat-icon>keyboard_arrow_right</mat-icon></button>
-  </div>
+    <div class="container cards-container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let pokemon of pokemons, let pointer = index">
+                <div (click)="openBottomSheet(pokemon)" class="hand-mouse card-container mat-elevation-z8 animated {{nameAnimation}} {{pokemon.backgroundColor}}">
+                    <img class="image-card" [src]="pokemon.imageUrl">
+                    <p class="subtitle capitalize text-center">{{pokemon.name}}</p>
+                    <button mat-stroked-button class="btn-more-detail"> Ver detalles <mat-icon>keyboard_arrow_right</mat-icon></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container btns-container">
+
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3">
+                <button mat-stroked-button (click)="getAftherPokemons()">
+            <mat-icon>keyboard_arrow_left</mat-icon> Anterior
+          </button>
+                <button mat-stroked-button (click)="getNextPokemons()"> Siguiente <mat-icon>keyboard_arrow_right</mat-icon></button>
+            </div>
+        </div>
+    </div>
+
+
 </div>

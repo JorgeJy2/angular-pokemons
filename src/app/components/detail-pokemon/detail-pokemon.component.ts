@@ -18,31 +18,18 @@ export class DetailPokemonComponent implements OnInit {
 
   constructor(
     private pokemonsService: PokemonsService,
-    private _bottomSheetRef: MatBottomSheetRef<DetailPokemonComponent>,
-    @Inject(MAT_BOTTOM_SHEET_DATA) public data: any) { 
+    private bottomSheetRef: MatBottomSheetRef<DetailPokemonComponent>,
+    @Inject(MAT_BOTTOM_SHEET_DATA) public data: any) {
     this.pokemon = data.pokemon;
+    this.detailPokemon = data.detailPokemon;
+    this.specie = data.specie;
   }
 
   ngOnInit() {
-    console.log(this.pokemon);
-    if(this.pokemon.name) {
-      this.pokemonsService.getPokemon(this.pokemon.name).then((detailPokemon: PokemonDetail)=> {
-        this.detailPokemon = detailPokemon;
-        console.log(this.detailPokemon);
-        console.log(this.detailPokemon.spritesImagesUrl);
-      }, console.error);
-      this.pokemonsService.getSpecie(this.pokemon.name).then((specie:Specie)=> {
-        this.specie = specie;
-      },console.error);
-
-    } else {
-      console.error('pokemon no have name.');
-    }
   }
 
   public openLink(event: MouseEvent): void {
-    this._bottomSheetRef.dismiss();
+    this.bottomSheetRef.dismiss();
     event.preventDefault();
   }
-
 }

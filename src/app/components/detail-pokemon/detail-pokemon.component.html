@@ -1,31 +1,31 @@
 <div class="detail-container {{pokemon?.backgroundColor}}">
-  <div class="detail-grid-container-main">
-    <div>
-      <img class="detail-image" [src]="pokemon?.detailImmageUrl" alt="" srcset="">
-    </div>
-    <div class="jaja">
-      <div class="detail-grid-container">
+    <div class="detail-grid-container-main" *ngIf="detailPokemon && pokemon && specie">
         <div>
-          <p class="subtitle capitalize">{{pokemon?.name}}</p>
+            <img class="detail-image" [src]="pokemon?.detailImmageUrl" alt="" srcset="">
         </div>
-        <div class="btn-close-container">
-          <button mat-stroked-button (click)="openLink($event)">
-            Cerrar <mat-icon>close</mat-icon>
-          </button>
+        <div class="info-detail-container">
+            <div class="detail-grid-container">
+                <div>
+                    <p class="title capitalize">{{pokemon?.name}}</p>
+                    <P class="subtitle">{{specie?.genus}}</P>
+                </div>
+                <div class="btn-close-container">
+                    <button mat-stroked-button (click)="openLink($event)">
+                        Cerrar <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <p class="description">Peso: {{detailPokemon?.weigth}} Kg / Altura: {{detailPokemon?.height}} M</p>
+            <div class="description-container">
+                <p class="description">{{specie?.description}}</p>
+            </div>
+            <p class="accent-text">Criatura</p>
+            <div>
+                <img *ngIf="detailPokemon?.spritesImagesUrl.back_default" [src]="detailPokemon?.spritesImagesUrl.back_default">
+                <img *ngIf="detailPokemon?.spritesImagesUrl.back_shiny" [src]="detailPokemon?.spritesImagesUrl.back_shiny">
+                <img *ngIf="detailPokemon?.spritesImagesUrl.front_default" [src]="detailPokemon?.spritesImagesUrl.front_default">
+                <img *ngIf="detailPokemon?.spritesImagesUrl.front_shiny" [src]="detailPokemon?.spritesImagesUrl.front_shiny">
+            </div>
         </div>
-      </div>
-      <P class="subtitle-su">{{specie?.genus}}</P>
-      <div class="description-container">
-        <p class="description">{{specie?.description}}</p>
-      </div>
-      <p class="accent-text">Criatura</p>
-      <div>
-        <img *ngIf="detailPokemon?.spritesImagesUrl.back_default" [src]="detailPokemon?.spritesImagesUrl.back_default"> 
-        <img *ngIf="detailPokemon?.spritesImagesUrl.back_shiny" [src]="detailPokemon?.spritesImagesUrl.back_shiny"> 
-        <img *ngIf="detailPokemon?.spritesImagesUrl.front_default" [src]="detailPokemon?.spritesImagesUrl.front_default"> 
-        <img *ngIf="detailPokemon?.spritesImagesUrl.front_shiny" [src]="detailPokemon?.spritesImagesUrl.front_shiny">  
-      </div>
-      <p>Peso: {{detailPokemon.weigth}} Kg / Altura: {{detailPokemon.height}} M</p>
     </div>
-  </div>
 </div>

@@ -1,66 +1,119 @@
 // CONTAINER INIT
-
 .main-container {
-  background-color: whitesmoke;
-  padding: 3%;
+    background-color: whitesmoke;
+    padding: 3%;
 }
 
 .container {
-  background-color: white;
-  border-radius: 40px;
-  padding: 2%;
+    background-color: white;
+    border-radius: 40px;
+    padding: 2%;
 }
 
 .btns-container {
-  margin-top: 3%;
+    margin-top: 3%;
 }
 
 .card-container {
-  border-radius: 20px;
-  padding-top: 100px;
-  height: 160px;
-  position: relative;
+    border-radius: 20px;
+    padding-top: 100px;
+    height: 160px;
+    position: relative;
+}
+
+.card-container:hover {
+    .image-card {
+        animation-name: example;
+        animation-duration: 1s;
+        top: -130px;
+    }
+    .subtitle {
+        position: relative;
+        animation-name: textanimate;
+        animation-duration: 1s;
+        top: -20px;
+    }
+    .btn-more-detail {
+        position: relative;
+        animation-name: textanimatebutton;
+        animation-duration: 1s;
+        top: -35px;
+        display: block;
+    }
+}
+
+@keyframes textanimatebutton {
+    from {
+        display: block;
+        top: 0px;
+    }
+    to {
+        top: -35px;
+        display: block;
+    }
+}
+
+@keyframes textanimate {
+    from {
+        top: 0px;
+    }
+    to {
+        top: -20px;
+    }
+}
+
+@keyframes example {
+    from {
+        top: -110px;
+    }
+    to {
+        top: -130px;
+    }
 }
 
 .cards-container {
-  height: 300px;
-  padding-top: 100px;
+    height: 330px;
+    padding-top: 115px;
 }
 
 .title-container {
-  margin-bottom: 3%;
+    margin-bottom: 3%;
 }
 
 // CONTAINER END
-
 // TEXT INIT
-
 .subtitle {
-  font-size: 1.5rem;
-  letter-spacing: 0.02rem;
-  font-weight: bold;
-  color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.02rem;
+    font-weight: bold;
+    color: white;
 }
 
 p.capitalize {
-  text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .image-card {
-  position: absolute;
-  top: -110px;
-  width: 90%;
+    position: absolute;
+    top: -110px;
+    width: 90%;
 }
 
 // text
 .title {
-  text-align: center;
-  font-size: 1.5rem;
-  letter-spacing: 0.02rem;
-  font-weight: bold;
-  color: #5a5656;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.02rem;
+    font-weight: bold;
+    color: #5a5656;
 }
 
 .pokebola {
-  width: 50px;
+    width: 50px;
+}
+
+.btn-more-detail {
+    color: white;
+    margin: 0 auto; // auto left/right margins
+    display: none;
 }

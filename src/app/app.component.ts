@@ -4,6 +4,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { PaginatorPokemonService } from './services/paginator-pokemon.service';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { DetailPokemonComponent } from './components/detail-pokemon/detail-pokemon.component';
+import { PokemonsService } from './services/pokemons.service';
+import { PokemonDetail } from './models/Pokemon.detail';
+import { Specie } from './models/PokemonSpecie.model';
 
 const ANIMATION_LEFT = 'fadeInLeftBig';
 const ANIMATION_RIGHT = 'fadeInRightBig';
@@ -20,13 +23,13 @@ const MESSAGE_OK = 'Entiendo';
 export class AppComponent implements OnInit {
 
   public pokemons: Pokemon[];
-
   public nameAnimation: string;
 
   constructor(
+    private pokemonService: PokemonsService,
     private paginatorPokemon: PaginatorPokemonService,
-    private _snackBar: MatSnackBar,
-    private _bottomSheet: MatBottomSheet) {
+    private snackBar: MatSnackBar,
+    private bottomSheet: MatBottomSheet) {
 
     this.pokemons = [];
     this.nameAnimation = ANIMATION_RIGHT;
@@ -51,21 +54,20 @@ export class AppComponent implements OnInit {
     this.nameAnimation = ANIMATION_LEFT;
   }
 
-  // Messages 
+  // Messages
   private showMessage(message: string): void {
-    this._snackBar.open(message, MESSAGE_OK, { duration: 2000 });
+    this.snackBar.open(message, MESSAGE_OK, { duration: 2000 });
   }
 
   // API REST
 
-  // Load in variable  the valuen LIMIT_POKEMON number 
+  // Load in variable  the valuen LIMIT_POKEMON number
   private getPokemons(): void {
     this.paginatorPokemon.getNext().then(
       (response: Pokemon[]) => this.pokemons = response,
       error => this.showMessage(error)
     );
   }
-
 
   private getBeforePokemons(): void {
     this.paginatorPokemon.getBefore().then(
@@ -75,6 +77,10 @@ export class AppComponent implements OnInit {
   }
 
   public openBottomSheet(pokemon: Pokemon): void {
-    this._bottomSheet.open(DetailPokemonComponent, { data: { pokemon: pokemon } });
+      this.pokemonService.getPokemon(pokemon.name).then( (detailPokemon: PokemonDetail) => {
+        this.pokemonService.getSpecie(pokemon.name).then((specie: Specie) => {
+          this.bottomSheet.open(DetailPokemonComponent, { data: { pokemon, detailPokemon,specie } });
+        }, console.error);
+      }, console.error);
   }
 }
