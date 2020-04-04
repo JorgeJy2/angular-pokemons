@@ -1,30 +1,30 @@
 <div class="detail-container {{pokemon?.backgroundColor}}">
     <div class="detail-grid-container-main" *ngIf="detailPokemon && pokemon && specie">
         <div>
-            <img class="detail-image" [src]="pokemon?.detailImmageUrl" alt="" srcset="">
+            <img class="detail-image animated fadeInUp" [src]="pokemon?.detailImmageUrl" alt="" srcset="">
         </div>
         <div class="info-detail-container">
             <div class="detail-grid-container">
                 <div>
-                    <p class="title capitalize">{{pokemon?.name}}</p>
-                    <P class="subtitle">{{specie?.genus}}</P>
+                    <p class="title capitalize animated fadeInUpBig">{{pokemon?.name}}</p>
+                    <P class="subtitle animated fadeInUpBig">{{specie?.genus}}</P>
                 </div>
-                <div class="btn-close-container">
+                <div class="btn-close-container animated fadeInUpBig">
                     <button mat-stroked-button (click)="openLink($event)">
                         Cerrar <mat-icon>close</mat-icon>
                     </button>
                 </div>
             </div>
-            <p class="description">Peso: {{detailPokemon?.weigth}} Kg / Altura: {{detailPokemon?.height}} M</p>
-            <div class="description-container">
-                <p class="description">{{specie?.description}}</p>
+            <p class="description animated fadeInUpBig">Peso: {{detailPokemon?.weigth}} Kg / Altura: {{detailPokemon?.height}} M</p>
+            <div class="description-container animated fadeInUpBig">
+                <p class="description animated fadeInUpBig">{{specie?.description}}</p>
             </div>
-            <p class="accent-text">Criatura</p>
+            <p class="accent-text animated fadeInUpBig">Criatura</p>
             <div>
-                <img *ngIf="detailPokemon?.spritesImagesUrl.back_default" [src]="detailPokemon?.spritesImagesUrl.back_default">
-                <img *ngIf="detailPokemon?.spritesImagesUrl.back_shiny" [src]="detailPokemon?.spritesImagesUrl.back_shiny">
-                <img *ngIf="detailPokemon?.spritesImagesUrl.front_default" [src]="detailPokemon?.spritesImagesUrl.front_default">
-                <img *ngIf="detailPokemon?.spritesImagesUrl.front_shiny" [src]="detailPokemon?.spritesImagesUrl.front_shiny">
+                <img class="animated fadeInUpBig" *ngIf="detailPokemon?.spritesImagesUrl.back_default" [src]="detailPokemon?.spritesImagesUrl.back_default">
+                <img class="animated fadeInUpBig" *ngIf="detailPokemon?.spritesImagesUrl.back_shiny" [src]="detailPokemon?.spritesImagesUrl.back_shiny">
+                <img class="animated fadeInUpBig" *ngIf="detailPokemon?.spritesImagesUrl.front_default" [src]="detailPokemon?.spritesImagesUrl.front_default">
+                <img class="animated fadeInUpBig" *ngIf="detailPokemon?.spritesImagesUrl.front_shiny" [src]="detailPokemon?.spritesImagesUrl.front_shiny">
             </div>
         </div>
     </div>

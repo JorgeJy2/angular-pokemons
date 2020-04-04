@@ -10,7 +10,6 @@
                     <img class="image-card" [src]="pokemon.imageUrl">
                     <p class="subtitle capitalize text-center">{{pokemon.name}}</p>
                     <button mat-stroked-button class="btn-more-detail"> Ver detalles <mat-icon>keyboard_arrow_right</mat-icon></button>
-
                 </div>
             </div>
         </div>
@@ -20,13 +19,19 @@
 
         <div class="row">
             <div class="col-3">
+                <!-- <a href="https://github.com/JorgeJy2/angular-pokemons"> -->
+                <button mat-stroked-button (click)="null" class="btn-repository">
+                    <img src="../assets/icons/github.png" alt="" srcset="">
+                    Jorge Jacobo
+                </button>
+                <!-- </a> -->
             </div>
             <div class="col-3"></div>
             <div class="col-3"></div>
             <div class="col-3">
                 <button mat-stroked-button (click)="getAftherPokemons()">
-            <mat-icon>keyboard_arrow_left</mat-icon> Anterior
-          </button>
+                    <mat-icon>keyboard_arrow_left</mat-icon> Anterior
+                </button>
                 <button mat-stroked-button (click)="getNextPokemons()"> Siguiente <mat-icon>keyboard_arrow_right</mat-icon></button>
             </div>
         </div>
@@ -34,3 +39,7 @@
 
 
 </div>
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.3)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>

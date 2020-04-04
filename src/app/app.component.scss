@@ -2,6 +2,7 @@
 .main-container {
     background-color: whitesmoke;
     padding: 3%;
+    overflow: hidden !important;
 }
 
 .container {
@@ -74,6 +75,7 @@
 .cards-container {
     height: 330px;
     padding-top: 115px;
+    overflow: hidden !important;
 }
 
 .title-container {
@@ -116,4 +118,8 @@ p.capitalize {
     color: white;
     margin: 0 auto; // auto left/right margins
     display: none;
+}
+
+.btn-repository {
+    color: #85919A;
 }

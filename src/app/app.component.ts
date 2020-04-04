@@ -7,6 +7,7 @@ import { DetailPokemonComponent } from './components/detail-pokemon/detail-pokem
 import { PokemonsService } from './services/pokemons.service';
 import { PokemonDetail } from './models/Pokemon.detail';
 import { Specie } from './models/PokemonSpecie.model';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 const ANIMATION_LEFT = 'fadeInLeftBig';
 const ANIMATION_RIGHT = 'fadeInRightBig';
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit {
   constructor(
     private pokemonService: PokemonsService,
     private paginatorPokemon: PaginatorPokemonService,
+    private spinner: NgxSpinnerService,
     private snackBar: MatSnackBar,
     private bottomSheet: MatBottomSheet) {
 
@@ -77,10 +79,18 @@ export class AppComponent implements OnInit {
   }
 
   public openBottomSheet(pokemon: Pokemon): void {
-      this.pokemonService.getPokemon(pokemon.name).then( (detailPokemon: PokemonDetail) => {
-        this.pokemonService.getSpecie(pokemon.name).then((specie: Specie) => {
-          this.bottomSheet.open(DetailPokemonComponent, { data: { pokemon, detailPokemon,specie } });
-        }, console.error);
-      }, console.error);
+    this.spinner.show();
+    this.pokemonService.getPokemon(pokemon.name).then((detailPokemon: PokemonDetail) => {
+      this.pokemonService.getSpecie(pokemon.name).then((specie: Specie) => {
+        this.spinner.hide();
+        this.bottomSheet.open(DetailPokemonComponent, { data: { pokemon, detailPokemon, specie } });
+      }, err => {
+        this.spinner.hide();
+        console.error(err);
+      } );
+    }, err => {
+      this.spinner.hide();
+      console.error(err);
+    });
   }
 }

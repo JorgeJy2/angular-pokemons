@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBottomSheetModule, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS } from '@angular/material/bottom-sheet';
 import { DetailPokemonComponent } from './components/detail-pokemon/detail-pokemon.component';
 import { MatListModule } from '@angular/material/list';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatIconModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    NgxSpinnerModule
   ],
   providers: [
     { provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }
