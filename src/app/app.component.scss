@@ -1,8 +1,8 @@
 // CONTAINER INIT
 .main-container {
-    background-color: whitesmoke;
-    padding: 3%;
-    overflow: hidden !important;
+    background-color: brown;
+    // overflow: hidden !important;
+    height: 100vh;
 }
 
 .container {
@@ -11,8 +11,34 @@
     padding: 2%;
 }
 
+// text
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.02rem;
+    font-weight: bold;
+    color: #5a5656;
+    height: 15vh;
+    background-color: red;
+    // margin-top: 3vh;
+}
+
+.cards-container {
+    padding-top: 115px;
+    overflow: hidden !important;
+    height: 58vh;
+    background-color: blue;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
 .btns-container {
-    margin-top: 3%;
+    // margin-top: 3%;
+    // margin-bottom: 3%;
+    background-color: blueviolet;
+    height: 15vh;
+    // margin-top: 3vh;
+    // margin-bottom: 3vh;
 }
 
 .card-container {
@@ -72,14 +98,8 @@
     }
 }
 
-.cards-container {
-    height: 330px;
-    padding-top: 115px;
-    overflow: hidden !important;
-}
-
 .title-container {
-    margin-bottom: 3%;
+    // margin-bottom: 3%;
 }
 
 // CONTAINER END
@@ -101,15 +121,6 @@ p.capitalize {
     width: 90%;
 }
 
-// text
-.title {
-    text-align: center;
-    font-size: 1.5rem;
-    letter-spacing: 0.02rem;
-    font-weight: bold;
-    color: #5a5656;
-}
-
 .pokebola {
     width: 50px;
 }
@@ -122,4 +133,9 @@ p.capitalize {
 
 .btn-repository {
     color: #85919A;
+}
+
+#footer {
+    clear: left;
+    border-top: 1px solid #369;
 }
