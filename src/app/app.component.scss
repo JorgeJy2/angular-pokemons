@@ -66,6 +66,27 @@
         }
     }
     
+    .card-container:not(:hover) {
+        .image-card {
+            animation-name: imageanimate-exit;
+            animation-duration: 1s;
+            top: -14.5vh;
+        }
+        .subtitle {
+            position: relative;
+            animation-name: textanimate-exit;
+            animation-duration: 1s;
+            top: 0;
+        }
+        .btn-more-detail {
+            position: relative;
+            animation-name: textanimatebutton-exit;
+            animation-duration: 1s;
+            top: 0;
+            display: none;
+        }
+    }
+    
     @keyframes textanimatebutton {
         from {
             display: block;
@@ -91,6 +112,35 @@
             top: -14.5vh;
         }
         to {
+            top: -16.5vh;
+        }
+    }
+    
+    @keyframes textanimatebutton-exit {
+        to {
+            display: block;
+            top: 0px;
+        }
+        from {
+            top: -35px;
+            display: block;
+        }
+    }
+    
+    @keyframes textanimate-exit {
+        to {
+            top: 0px;
+        }
+        from {
+            top: -20px;
+        }
+    }
+    
+    @keyframes imageanimate-exit {
+        to {
+            top: -14.5vh;
+        }
+        from {
             top: -16.5vh;
         }
     }
