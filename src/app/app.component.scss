@@ -13,13 +13,14 @@
     }
     
     // text
-    .title {
+    .title-container {
         text-align: center;
         font-size: 1.5rem;
         letter-spacing: 0.02rem;
         font-weight: bold;
         color: #5a5656;
         height: 15vh;
+        position: relative;
     }
     
     .cards-container {
@@ -27,11 +28,10 @@
         height: 58vh;
         margin-top: 3vh;
         margin-bottom: 3vh;
-        background-color: yellowgreen;
         padding-top: 20vh;
     }
     
-    .btns-container {
+    .footer-container {
         height: 15vh;
         margin-bottom: 3vh;
         padding: 0;
@@ -41,7 +41,7 @@
     .card-container {
         border-radius: 20px;
         padding-top: 15vh;
-        height: 25vh;
+        height: 22.3vh;
         position: relative;
     }
     
@@ -115,7 +115,7 @@
     }
     
     .pokebola {
-        width: 50px;
+        height: 100%;
     }
     
     .btn-more-detail {
@@ -130,6 +130,8 @@
     
     .footer-text {
         height: 40px;
+        padding-left: 2%;
+        padding-right: 2%;
     }
     
     .center-vertical {
@@ -141,6 +143,15 @@
         margin: auto;
     }
     
-    .main-cards {
-        background-color: #85919A;
+    .main-title {
+        height: 50%;
+    }
+    
+    .container-author,
+    .container-btns-accion {
+        display: inline;
+    }
+    
+    .container-btns-accion {
+        float: right;
     }

@@ -1,10 +1,12 @@
 <div class="main-container">
-    <div class="container title">
-        <img class="pokebola" src="../assets/image/pokemon.png" alt="" srcset=""> Pokemons
+    <div class="container title-container">
+        <div class="main-title center-vertical">
+            <img class="pokebola" src="../assets/image/pokemon.png" alt="" srcset=""> Pokemons
+        </div>
     </div>
 
     <div class="container cards-container">
-        <div class="row main-cards">
+        <div class="row ">
             <div class="col-md-3" *ngFor="let pokemon of pokemons, let pointer = index">
                 <div (click)="openBottomSheet(pokemon)" class="hand-mouse card-container mat-elevation-z8 animated {{nameAnimation}} {{pokemon.backgroundColor}}">
                     <img class="image-card" [src]="pokemon.imageUrl">
@@ -15,19 +17,17 @@
         </div>
     </div>
 
-    <div class="container btns-container">
-        <div class="row footer-text center-vertical">
-            <div class="col-3">
-                <!-- <a href="https://github.com/JorgeJy2/angular-pokemons"> -->
-                <button mat-stroked-button (click)="null" class="btn-repository">
+    <div class="container footer-container">
+        <div class="footer-text center-vertical">
+            <div class="container-author">
+                <a href="https://github.com/JorgeJy2/angular-pokemons">
+                    <button mat-stroked-button (click)="null" class="btn-repository">
                     <img src="../assets/icons/github.png" alt="" srcset="">
                     Jorge Jacobo
                 </button>
-                <!-- </a> -->
+                </a>
             </div>
-            <div class="col-3"></div>
-            <div class="col-3"></div>
-            <div class="col-3">
+            <div class="container-btns-accion">
                 <button mat-stroked-button (click)="getAftherPokemons()">
                     <mat-icon>keyboard_arrow_left</mat-icon> Anterior
                 </button>
