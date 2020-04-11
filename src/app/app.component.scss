@@ -1,141 +1,146 @@
-// CONTAINER INIT
-.main-container {
-    background-color: brown;
-    // overflow: hidden !important;
-    height: 100vh;
-}
-
-.container {
-    background-color: white;
-    border-radius: 40px;
-    padding: 2%;
-}
-
-// text
-.title {
-    text-align: center;
-    font-size: 1.5rem;
-    letter-spacing: 0.02rem;
-    font-weight: bold;
-    color: #5a5656;
-    height: 15vh;
-    background-color: red;
-    // margin-top: 3vh;
-}
-
-.cards-container {
-    padding-top: 115px;
-    overflow: hidden !important;
-    height: 58vh;
-    background-color: blue;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-}
-
-.btns-container {
-    // margin-top: 3%;
-    // margin-bottom: 3%;
-    background-color: blueviolet;
-    height: 15vh;
-    // margin-top: 3vh;
-    // margin-bottom: 3vh;
-}
-
-.card-container {
-    border-radius: 20px;
-    padding-top: 100px;
-    height: 160px;
-    position: relative;
-}
-
-.card-container:hover {
-    .image-card {
-        animation-name: example;
-        animation-duration: 1s;
-        top: -130px;
+    // CONTAINER INIT
+    .main-container {
+        background-color: whitesmoke;
+        // overflow: hidden !important;
+        height: 100vh;
+        padding: 3vh;
     }
+    
+    .container {
+        background-color: white;
+        border-radius: 40px;
+        padding: 2%;
+    }
+    
+    // text
+    .title {
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 0.02rem;
+        font-weight: bold;
+        color: #5a5656;
+        height: 15vh;
+    }
+    
+    .cards-container {
+        overflow: hidden !important;
+        height: 58vh;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        background-color: yellowgreen;
+        padding-top: 20vh;
+    }
+    
+    .btns-container {
+        height: 15vh;
+        margin-bottom: 3vh;
+        padding: 0;
+        position: relative;
+    }
+    
+    .card-container {
+        border-radius: 20px;
+        padding-top: 15vh;
+        height: 25vh;
+        position: relative;
+    }
+    
+    .card-container:hover {
+        .image-card {
+            animation-name: imageanimate;
+            animation-duration: 1s;
+            top: -16.5vh;
+        }
+        .subtitle {
+            position: relative;
+            animation-name: textanimate;
+            animation-duration: 1s;
+            top: -20px;
+        }
+        .btn-more-detail {
+            position: relative;
+            animation-name: textanimatebutton;
+            animation-duration: 1s;
+            top: -35px;
+            display: block;
+        }
+    }
+    
+    @keyframes textanimatebutton {
+        from {
+            display: block;
+            top: 0px;
+        }
+        to {
+            top: -35px;
+            display: block;
+        }
+    }
+    
+    @keyframes textanimate {
+        from {
+            top: 0px;
+        }
+        to {
+            top: -20px;
+        }
+    }
+    
+    @keyframes imageanimate {
+        from {
+            top: -14.5vh;
+        }
+        to {
+            top: -16.5vh;
+        }
+    }
+    
+    // CONTAINER END
+    // TEXT INIT
     .subtitle {
-        position: relative;
-        animation-name: textanimate;
-        animation-duration: 1s;
-        top: -20px;
+        font-size: 1.5rem;
+        letter-spacing: 0.02rem;
+        font-weight: bold;
+        color: white;
     }
+    
+    p.capitalize {
+        text-transform: capitalize;
+    }
+    
+    .image-card {
+        position: absolute;
+        top: -14.5vh;
+        width: 90%;
+    }
+    
+    .pokebola {
+        width: 50px;
+    }
+    
     .btn-more-detail {
-        position: relative;
-        animation-name: textanimatebutton;
-        animation-duration: 1s;
-        top: -35px;
-        display: block;
+        color: white;
+        margin: 0 auto; // auto left/right margins
+        display: none;
     }
-}
-
-@keyframes textanimatebutton {
-    from {
-        display: block;
-        top: 0px;
+    
+    .btn-repository {
+        color: #85919A;
     }
-    to {
-        top: -35px;
-        display: block;
+    
+    .footer-text {
+        height: 40px;
     }
-}
-
-@keyframes textanimate {
-    from {
-        top: 0px;
+    
+    .center-vertical {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
-    to {
-        top: -20px;
+    
+    .main-cards {
+        background-color: #85919A;
     }
-}
-
-@keyframes example {
-    from {
-        top: -110px;
-    }
-    to {
-        top: -130px;
-    }
-}
-
-.title-container {
-    // margin-bottom: 3%;
-}
-
-// CONTAINER END
-// TEXT INIT
-.subtitle {
-    font-size: 1.5rem;
-    letter-spacing: 0.02rem;
-    font-weight: bold;
-    color: white;
-}
-
-p.capitalize {
-    text-transform: capitalize;
-}
-
-.image-card {
-    position: absolute;
-    top: -110px;
-    width: 90%;
-}
-
-.pokebola {
-    width: 50px;
-}
-
-.btn-more-detail {
-    color: white;
-    margin: 0 auto; // auto left/right margins
-    display: none;
-}
-
-.btn-repository {
-    color: #85919A;
-}
-
-#footer {
-    clear: left;
-    border-top: 1px solid #369;
-}

@@ -1,10 +1,10 @@
 <div class="main-container">
-    <div class="container title title-container">
+    <div class="container title">
         <img class="pokebola" src="../assets/image/pokemon.png" alt="" srcset=""> Pokemons
     </div>
 
     <div class="container cards-container">
-        <div class="row">
+        <div class="row main-cards">
             <div class="col-md-3" *ngFor="let pokemon of pokemons, let pointer = index">
                 <div (click)="openBottomSheet(pokemon)" class="hand-mouse card-container mat-elevation-z8 animated {{nameAnimation}} {{pokemon.backgroundColor}}">
                     <img class="image-card" [src]="pokemon.imageUrl">
@@ -15,9 +15,8 @@
         </div>
     </div>
 
-    <div id="footer" class="container btns-container">
-
-        <div class="row">
+    <div class="container btns-container">
+        <div class="row footer-text center-vertical">
             <div class="col-3">
                 <!-- <a href="https://github.com/JorgeJy2/angular-pokemons"> -->
                 <button mat-stroked-button (click)="null" class="btn-repository">
