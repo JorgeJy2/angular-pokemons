@@ -205,3 +205,30 @@
     .container-btns-accion {
         float: right;
     }
+    
+    @media (max-width: 767px) {
+        .cards-container {
+            overflow: hidden !important;
+            padding: 5%;
+            padding-top: 6vh;
+        }
+        .jekdmd {
+            display: grid !important;
+            grid-template-columns: 49% auto !important;
+            grid-gap: .5% !important;
+            col-md-3 {
+                text-align: justify !important;
+                padding: 15px 0 !important;
+            }
+        }
+        .image-card {
+            position: relative;
+            width: 70%;
+            top: 0 !important;
+            margin: auto !important;
+        }
+        .card-container {
+            padding-top: 0 !important;
+            margin-bottom: 5%;
+        }
+    }

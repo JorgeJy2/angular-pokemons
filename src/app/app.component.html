@@ -6,7 +6,7 @@
     </div>
 
     <div class="container cards-container">
-        <div class="row ">
+        <div class="row jekdmd">
             <div class="col-md-3" *ngFor="let pokemon of pokemons, let pointer = index">
                 <div (click)="openBottomSheet(pokemon)" class="hand-mouse card-container mat-elevation-z8 animated {{nameAnimation}} {{pokemon.backgroundColor}}">
                     <img class="image-card" [src]="pokemon.imageUrl">

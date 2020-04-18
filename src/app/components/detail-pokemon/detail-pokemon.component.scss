@@ -27,6 +27,8 @@
     div {
         text-align: justify;
         padding: 15px 0;
+        width: 100%;
+        text-align: center !important;
     }
 }
 
@@ -82,4 +84,74 @@ p.capitalize {
 
 .info-detail-container {
     padding: 3% !important;
+}
+
+@media (max-width: 767px) {
+    .detail-container {
+        overflow: auto !important;
+    }
+    .detail-image {
+        width: 50%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .detail-grid-container-main {
+        display: list-item;
+        grid-template-columns: 100% auto;
+        grid-gap: 10px;
+        div {
+            text-align: justify;
+            padding: 0;
+        }
+    }
+    .detail-grid-container {
+        display: list-item;
+        grid-template-columns: 100% auto;
+        grid-gap: 10px;
+        div {
+            text-align: justify;
+            padding: 0;
+        }
+    }
+    .description {
+        font-size: 1rem;
+        letter-spacing: 0.03rem;
+        font-weight: normal;
+        color: white;
+    }
+    .descri {
+        text-align: justify !important;
+    }
+    .btn-close {
+        font-size: 40px;
+        .mat-icon {
+            font-size: 15px;
+        }
+    }
+    .title {
+        font-size: 2.5rem;
+        letter-spacing: 0.02rem;
+        font-weight: bold;
+        color: white;
+    }
+    .subtitle {
+        font-size: 1rem;
+        letter-spacing: 0.12rem;
+        font-weight: normal;
+        color: white;
+        margin-top: .8em;
+    }
+    p.accent-text {
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+        font-weight: bold;
+        color: white;
+    }
+    p.capitalize {
+        text-transform: capitalize;
+    }
+    .info-detail-container {
+        padding: 1% !important;
+        text-align: center !important;
+    }
 }

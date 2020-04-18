@@ -6,3 +6,15 @@
     border-top-left-radius: 100px !important;
     padding: 0 !important;
 }
+
+@media (max-width: 767px) {
+    .mat-bottom-sheet-container {
+        min-height: 75vh;
+        min-width: 100vw !important;
+        margin-left: 0 !important;
+        margin-top: 25vh;
+        border-top-left-radius: 40px !important;
+        border-top-right-radius: 40px !important;
+        padding: 0 !important;
+    }
+}
