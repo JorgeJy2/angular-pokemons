@@ -206,7 +206,27 @@
         float: right;
     }
     
+    @media (min-width: 768px) and (max-width: 991px) {
+        .container {
+            width: 100% !important;
+            margin: 0 !important;
+            margin-bottom: 2% !important;
+            min-width: 100% !important;
+        }
+        .main-container {
+            width: 100% !important;
+        }
+    }
+    
     @media (max-width: 767px) {
+        .container-author {
+            display: flow-root;
+        }
+        .footer-container {
+            .center-vertical {
+                position: relative;
+            }
+        }
         .cards-container {
             overflow: hidden !important;
             padding: 5%;
@@ -224,11 +244,60 @@
         .image-card {
             position: relative;
             width: 70%;
+            height: 70%;
             top: 0 !important;
-            margin: auto !important;
+            margin-left: 15% !important;
+            margin-right: 125% !important;
         }
         .card-container {
             padding-top: 0 !important;
             margin-bottom: 5%;
+        }
+        // TEXT INIT
+        .subtitle {
+            font-size: 1rem;
+            letter-spacing: 0.015rem;
+            font-weight: bold;
+            color: white;
+        }
+        .card-container:not(:hover) {
+            .image-card {
+                animation-name: none !important;
+                animation-duration: 1s;
+                top: 0vh;
+            }
+            .subtitle {
+                position: relative;
+                animation-name: none !important;
+                animation-duration: 1s;
+                top: 0;
+            }
+            .btn-more-detail {
+                position: relative;
+                animation-name: none !important;
+                animation-duration: 1s;
+                top: 0;
+                display: none;
+            }
+        }
+        .card-container:hover {
+            .image-card {
+                animation-name: none !important;
+                animation-duration: 1s;
+                top: 0vh;
+            }
+            .subtitle {
+                position: relative;
+                animation-name: none !important;
+                animation-duration: 1s;
+                top: 0;
+            }
+            .btn-more-detail {
+                position: relative;
+                animation-name: none !important;
+                animation-duration: 1s;
+                top: 0;
+                display: none;
+            }
         }
     }
