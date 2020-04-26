@@ -4,17 +4,9 @@
             <img class="detail-image animated fadeInUp" [src]="pokemon?.detailImmageUrl" alt="" srcset="">
         </div>
         <div class="info-detail-container">
-            <div class="detail-grid-container">
-                <div>
-                    <p class="title capitalize animated fadeInUpBig">{{pokemon?.name}}</p>
-                    <P class="subtitle animated fadeInUpBig">{{specie?.genus}}</P>
-                </div>
-                <div class="btn-close-container animated fadeInUpBig">
-                    <button mat-stroked-button (click)="openLink($event)">
-                        Cerrar <mat-icon>close</mat-icon>
-                    </button>
-                </div>
-            </div>
+            <p class="title capitalize animated fadeInUpBig">{{pokemon?.name}}</p>
+            <P class="subtitle animated fadeInUpBig">{{specie?.genus}}</P>
+
             <p class="description animated fadeInUpBig">Peso: {{detailPokemon?.weigth}} Kg / Altura: {{detailPokemon?.height}} M</p>
             <div class="description-container animated fadeInUpBig">
                 <p class="description descri animated fadeInUpBig">{{specie?.description}}</p>
@@ -27,5 +19,11 @@
                 <img class="animated fadeInUpBig" *ngIf="detailPokemon?.spritesImagesUrl.front_shiny" [src]="detailPokemon?.spritesImagesUrl.front_shiny">
             </div>
         </div>
+    </div>
+
+    <div class="btn-close-container animated fadeInUpBig">
+        <button mat-stroked-button (click)="openLink($event)">
+                Cerrar <mat-icon>close</mat-icon>
+            </button>
     </div>
 </div>
