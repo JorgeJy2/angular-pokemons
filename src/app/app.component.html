@@ -6,7 +6,7 @@
     </div>
 
     <div class="container cards-container">
-        <div class="row jekdmd">
+        <div class="row responsive-grid">
             <div class="col-md-3" *ngFor="let pokemon of pokemons, let pointer = index">
                 <div (click)="openBottomSheet(pokemon)" class="hand-mouse card-container mat-elevation-z8 animated {{nameAnimation}} {{pokemon.backgroundColor}}">
                     <img class="image-card" [src]="pokemon.imageUrl">
@@ -35,8 +35,6 @@
             </div>
         </div>
     </div>
-
-
 </div>
 
 <ngx-spinner bdColor="rgba(0, 0, 0, 0.3)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
